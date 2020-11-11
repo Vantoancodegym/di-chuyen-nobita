@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>su kien chuot</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="https://thiepmung.com/images/frame/frame_icon/anh-che-nobita-25716d2b005ee0.jpg"
+         width="200px" style="position: relative; left: 200px; top: 200px">
+    <button type="button" onclick="window.addEventListener('keydown', move)">Click here then use keyboard</button>
+</form>
+</body>
+</html>
+<script>
+    function moveRight() {
+        var pic = document.getElementById('myImage');
+        pic.style.left = parseInt(pic.style.left) + 10 + 'px';
+    }
+    function moveLeft() {
+        var pic = document.getElementById('myImage');
+        pic.style.left = parseInt(pic.style.left) - 10 + 'px';
+    }
+    function moveUp() {
+        var pic = document.getElementById('myImage');
+        pic.style.top = parseInt(pic.style.top) - 5 + 'px';
+    }
+    function moveDown() {
+        var pic = document.getElementById('myImage');
+        pic.style.top = parseInt(pic.style.top) + 5 + 'px';
+    }
+    function move (sk) {
+        switch (sk.keyCode) {
+            case 37:
+                moveLeft();
+                break;
+            case 39:
+                moveRight();
+                break;
+            case 38:
+                moveUp();
+                break;
+            case 40:
+                moveDown();
+                break;
+        }
+    }
+</script>
